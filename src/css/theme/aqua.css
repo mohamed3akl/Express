@@ -4442,6 +4442,7 @@ textarea.form-control.is-invalid {
   padding-right: 0;
   padding-bottom: 0;
   padding-left: 0;
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .navbar > .container,
