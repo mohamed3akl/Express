@@ -578,7 +578,7 @@ $('.homeOwl').owlCarousel({
     loop:true,
     margin:10,
     nav:false,
-	dots:false,
+	dots:true,
 	lazyLoad:true,
 	// autoplay:true,
     responsive:{
