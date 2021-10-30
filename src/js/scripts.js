@@ -250,7 +250,21 @@ $(document).ready(function() {
 	/*-----------------------------------------------------------------------------------*/
 	/*	OWL CAROUSEL
 	/*-----------------------------------------------------------------------------------*/
-	$('.basic-slider').each(function() {
+	$('.basic-slider_ar').each(function() {
+		var $bslider = $(this);
+		$bslider.owlCarousel({
+			items: 1,
+			rtl:true,
+			nav: $bslider.data("nav"),
+			navText: ["<i class='uil-arrow-left'></i>", "<i class='uil-arrow-right'></i>"],
+			dots: true,
+			dotsEach: true,
+			autoHeight: true,
+			loop: true,
+			margin: $bslider.data("margin")
+		});
+	});
+	$('.basic-slider_en').each(function() {
 		var $bslider = $(this);
 		$bslider.owlCarousel({
 			items: 1,
@@ -263,7 +277,23 @@ $(document).ready(function() {
 			margin: $bslider.data("margin")
 		});
 	});
-	$('.carousel').each(function() {
+	$('.carousel_ar').each(function() {
+		var $carousel = $(this);
+		$carousel.owlCarousel({
+			autoHeight: false,
+			rtl:true,
+			nav: $carousel.data("nav"),
+			navText: ["<i class='uil-arrow-left'></i>", "<i class='uil-arrow-right'></i>"],
+			dots: $carousel.data("dots"),
+			dotsEach: true,
+			loop: $carousel.data("loop"),
+			margin: $carousel.data("margin"),
+			autoplay: $carousel.data("autoplay"),
+			autoplayTimeout: $carousel.data("autoplay-timeout"),
+			responsive: $carousel.data("responsive")
+		});
+	});
+	$('.carousel_en').each(function() {
 		var $carousel = $(this);
 		$carousel.owlCarousel({
 			autoHeight: false,
@@ -574,12 +604,33 @@ $(document).ready(function() {
 	});
 });
 
-$('.homeOwl').owlCarousel({
+$('.homeOwlen').owlCarousel({
     loop:true,
     margin:10,
     nav:false,
 	dots:true,
 	lazyLoad:true,
+	//rtl:true,
+	// autoplay:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:1
+        }
+    }
+})
+$('.homeOwlar').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:false,
+	dots:true,
+	lazyLoad:true,
+	rtl:true,
 	// autoplay:true,
     responsive:{
         0:{
